@@ -1,23 +1,24 @@
 #clock {
-
+  position: relative
 }
 
 #clock img {
-    position: absolute;
+    position: absolute
 }
 
 #face {
-
+z-index: 0
 
 }
 #hour {
-  position: relative;
+
+  z-index: 1
 }
 
 #minute {
-    position: relative;
+    z-index: 2
 }
 
 #second {
-    position: relative;
+    z-index: 3
 }
