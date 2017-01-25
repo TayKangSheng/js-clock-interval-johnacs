@@ -43,7 +43,7 @@ function hourRotation (myHour) {
   if (myHour === 0) {
     return 0
   } else {
-    var hourPlusFraction = (myHour / 12) * 360 + (timeInMinutes + 0.5) // 60deg for between each hours
+    var hourPlusFraction = (myHour / 12) * 360
     return hourPlusFraction
   }
 }
