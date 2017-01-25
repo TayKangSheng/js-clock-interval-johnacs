@@ -1,9 +1,12 @@
-document.addEventListener('DOMContentLoaded', init)
 
+
+
+function clock(){
 var secondsElement = document.getElementById('second')
 var minutesElement = document.getElementById('minute')
 var hoursElement = document.getElementById('hour')
 
+var now = new Date()
 var timeInSeconds = now.getSeconds()
 var timeInMinutes = now.getMinutes()
 var timeInHours = now.getHours()
@@ -13,7 +16,7 @@ function init () {
 }
 
 function displayTime () {
-  var now = new Date()
+  now = new Date()
   timeInSeconds = now.getSeconds()
   timeInMinutes = now.getMinutes()
   timeInHours = now.getHours()
@@ -40,7 +43,24 @@ function hourRotation (myHour) {
   if (myHour === 0) {
     return 0
   } else {
-    var hourPlusFraction = (myHour / 12) * 360 + (timeInMinutes % 60) // 60deg for between each hours
+    var hourPlusFraction = (myHour / 12) * 360 + (timeInMinutes + 0.5) // 60deg for between each hours
     return hourPlusFraction
   }
 }
+
+return{
+  init: init
+  // displayTime: displayTime,
+  // secondRotation:secondRotation,
+  // minuteRotation: minuteRotation,
+  // hourRotation: hourRotation
+}
+
+}
+
+
+document.addEventListener('DOMContentLoaded', function(){
+var myClock = clock()
+myClock.init()
+
+})
