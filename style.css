@@ -1,9 +1,16 @@
+body{
+  background: url(/img/room.jpg) no-repeat;
+  background-size: cover;
+
+}
+
 #clock {
-  position: relative
+  position: relative;
+  margin: 5px auto;
 }
 
 #clock img {
-    position: absolute
+    position: absolute;
 }
 
 #face {
